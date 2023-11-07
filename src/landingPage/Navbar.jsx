@@ -70,13 +70,13 @@ function Navbar(){
      <FaCaretDown/>
      <ul className='hidden group-hover:block absolute border-2 border-white  top-[99%] text-[15px] pt-2 bg-white left-[64.8%] shadow-sm'>
      <li className='hover:bg-[#ECFFFD] p-4'>
-         RaiseUp for schools
+       <Link to='/Raise'>RaiseUp for schools </Link>  
      </li>
      <li className='hover:bg-[#ECFFFD] p-4'>
-         Hubtel for Hospitals
+      <Link to='/Hospitals'>Hubtel for Hospitals</Link>   
      </li>
  <li className='hover:bg-[#ECFFFD] p-4'>
-     Hubtel for Government
+  <Link to='/Government'>   Hubtel for Government</Link>
  </li>
      </ul>
  

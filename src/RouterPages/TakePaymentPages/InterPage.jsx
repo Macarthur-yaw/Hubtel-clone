@@ -1,6 +1,6 @@
 import devPortal from '../../assets/dev-portal.webp'
 import moveMoney from '../../assets/move-monoey.png'
-import moveMoney1 from '../../assets/move-monoey (1).png'
+// import moveMoney1 from '../../assets/move-monoey (1).png'
 import majorPayment from '../../assets/major-payments-v.webp'
 import checkIcon from '../../assets/feather-check-circle.png'
 import insightPic from '../../assets/insights.png'
@@ -127,8 +127,8 @@ Meaning your money is safe, and can be transferred instantly to any bank account
  </div>
 
  <div className='pb-20 bg-[#eff8fc] pt-6 flex flex-col items-center gap-4'>
-    <img src={payLoard} alt='a payload' className='mx-auto rounded-md  w-[60%] h-[100%]'/>
- <button className='border-2 p-2 rounded-md w-[30%]'>
+    <img src={payLoard} alt='a payload' className=' rounded-md  w-[60%] h-[100%]'/>
+ <button className='border-2 p-2 rounded-md bg-[#01c7b1] border-[#01c7b1] border-2 text-white p-2 rounded-md w-[30%]'>
     START INTEGRATING
  </button>
  

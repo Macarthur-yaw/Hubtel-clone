@@ -8,6 +8,9 @@ import RequestPage from './RouterPages/TakePaymentPages/RequestPage'
 import InterPage from './RouterPages/TakePaymentPages/InterPage'
 import Navbar from './landingPage/Navbar'
 import Footer from './landingPage/Footer'
+import Raise from './RouterPages/GrowRevenuesPages/Raise'
+import HubtelRev from './RouterPages/GrowRevenuesPages/HubtelRev'
+import HubtelRev2 from './RouterPages/GrowRevenuesPages/HubtelRev2'
 
 function App() {
 
@@ -22,6 +25,11 @@ function App() {
   <Route path='/Charge' element={<Charge/>}/>
   <Route path='/inter' element={<InterPage/>}/>
   <Route path='/Request' element={<RequestPage/>}/>
+
+<Route path='/Raise' element={<Raise/>}/>
+
+<Route path='/Hospitals' element={<HubtelRev/>}/>
+<Route path='/Government' element={<HubtelRev2/>}/>
 
 
 </Routes>
