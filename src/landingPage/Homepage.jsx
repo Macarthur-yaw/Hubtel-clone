@@ -15,7 +15,7 @@ import {motion} from 'framer-motion'
 import qrIcon from '../assets/qr-icon.png'
 import hubtelPhone from '../assets/MicrosoftTeams-image.png'
 import Footer from './Footer'
-
+import basketTwo from '../assets/Basket-compressed.png'
 
 // import Navbar from './Navbar'
 
@@ -28,63 +28,75 @@ setImag(imgName)
     }
     return(
       <div>
-      <div className='flex flex-col absolute gap-2 items-center   top-[15%] left-1/2 transform -translate-x-1/2'>
-            <h1 className='text-[32px] font-bold text-center'>
+      <div className='pt-[28%] flex flex-col items-center md:flex md:flex-col md:absolute md:gap-2 md:items-center   md:top-[15%] md:left-1/2 md:transform md:-translate-x-1/2'>
+            <h1 className='md:text-[32px] text-[20px] font-bold text-center'>
                 Find and pay
                 <br/>
                   for everyday essentials
-            </h1>
+            </h1> 
 
-<h3 className='text-semibold'>
+<h3 className='text-semibold '>
     from local retailers,food vendors and service providers
 </h3>
 
 <div>
-    <div className='flex flex-row   h-[53.58px] p-2  md:w-[439px] bg-white'>
+    <div className='flex flex-row   md:h-[53.58px] p-2  md:w-[439px] w-[120%] bg-white border-[1px] border-white bg-[#f2f2f2] rounded-md'>
 
     <img src={locationArrow} alt='a location arrow' width='17px'/>
     <input type='text'
-    className='border-none p-4 w-[100%] text-[10px]
+    className='border-2 border-[#f2f2f2] bg-[#f2f2f2] p-4 w-[100%] text-[12px] 
     outline-none
     '
     placeholder='Set your location to continue'/>
     </div>
 
-<div className='text-center'>
+<div className='text-center hidden md:block'>
     or <a href='' className='text-[16px] text-[#01C7B1]'>Login</a>
     </div>
+
+    
 </div>
 </div>
 
 
-<div id='backgroundImage'>
+<div className='md:hidden fixed z-10 w-[100%] bg-white  left-0 border-2 border-white bottom-0 p-2'>
+       <button className='bg-[#01c7b1] w-[100%] p-2 border-[#01c7b1] text-white font-semibold rounded-md'> LOGIN</button>
+    </div>
+<div id='backgroundImage' className='hidden md:block'>
 <img src={backgroundImage}/>
 </div>
 
-<div className='absolute left-1/2 transform -translate-x-1/2 top-[55%] z-8'>
+<div className='hidden md:absolute md:left-1/2 md:transform md:-translate-x-1/2 md:top-[55%] md:z-8'>
     <img src={basket} className='w-[90%]'/>
 
 </div>
 
-<div className='absolute left-1/2 transform -translate-x-1/2 top-[65%] animate-bounce'>
+<div className=''>
+    <img src={basketTwo} className=''/>
+
+</div>
+
+
+
+<div className='hidden md:absolute md:left-1/2 md:transform md:-translate-x-1/2 md:top-[65%] md:animate-bounce'>
     <img src={sure} className='w-[35%]'/>
 </div>
 
-<div className='absolute left-1/2 transform -translate-x-1/2 '>
+<div className='hidden md:absolute md:left-1/2 md:transform md:-translate-x-1/2 '>
     <img src={ribbon} className='w-[29%]'/>
 </div>
 
 
-<div className='pt-[250px] '>
-<div className='flex flex-row  justify-between items-center  bg-[#dbf7e0]'>
-<div>
-    {imag && <img src={imag} height='550px' />}
+<div className='md:pt-[250px] md:py-20 '>
+<div className='md:flex md:flex-row flex flex-col items-center justify-center md:justify-between md:items-center  bg-[#dbf7e0]'>
+<div className='w-[100%] h-[450px] '>
+    {imag && <img src={imag} height='550px' width='' />}
 </div>
 
-<div className='flex flex-col gap-4 p-2'>
+<div className='flex flex-col gap-8 p-2'>
     <motion.div 
     initial={{scale:1}}
-    whileHover={{scale:1.03}}
+    whileHover={{scale:1.01}}
     
     onMouseEnter={()=>changeImage(side1)}>
     <Card
@@ -100,7 +112,7 @@ img={searchButton}
 
 <motion.div
   initial={{scale:1}}
-  whileHover={{scale:1.03}}
+  whileHover={{scale:1.01}}
 onMouseEnter={()=>changeImage(side2)} >
 
  <Card
@@ -112,7 +124,7 @@ onMouseEnter={()=>changeImage(side2)} >
 </motion.div>
     <motion.div 
       initial={{scale:1}}
-      whileHover={{scale:1.03}}
+      whileHover={{scale:1.01}}
     
     onMouseEnter={()=>changeImage(side3)}
      >
@@ -129,20 +141,20 @@ onMouseEnter={()=>changeImage(side2)} >
 <div>
 
   
-<div className='flex flex-row items-center  w-fit mx-auto gap-10 justify-between pt-10 '>
-    <div>
-    <h1 className='text-[24px] font-bold'>
+<div className='flex flex-col  justify-center  gap-10  pt-10 py-10'>
+    <div className=''>
+    <h1 className='md:text-[24px] text-[20px] font-bold w-[100%] text-left p-2'>
         Experience the Hubtel app 
-        <br/>
+        
         like never before
 <br/>
         <a href='' className='text-[#01c7b1] font-semibold'>Read more</a>
     </h1>
-    <img src={qrIcon} alt='a qr icon'/>
+    <img src={qrIcon} alt='a qr icon' className='hidden md:block'/>
    
     </div>
-    <div className=''>
-    <img src={hubtelPhone} alt='a hubtel'  height='190%' />
+    <div className='p-2'>
+    <img src={hubtelPhone} alt='a hubtel'  height='190%' className=' md:w-auto' />
     </div>
     </div>
 </div>

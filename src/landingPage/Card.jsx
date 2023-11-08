@@ -2,7 +2,7 @@
 const Card = ({title,content,img}) => {
     
     return ( 
-        <div className="flex flex-row items-center gap-2 w-[85%] border-2 border-l-[4px] border-l-white bg-white rounded-md hover:border-l-[4px] hover:border-l-[#fb5858]  border-white shadow-lg cursor-pointer p-4"> 
+        <div className="flex flex-row items-center gap-2  border-2 border-l-[4px] border-l-white bg-white rounded-md hover:border-l-[4px] hover:border-l-[#fb5858]  border-white shadow-lg cursor-pointer p-4"> 
             <img src={img} className="w-[48px] h-[48px]"/>
 
 <div>

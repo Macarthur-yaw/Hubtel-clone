@@ -154,7 +154,7 @@ function Navbar(){
  
              </div>
 <div>
-<motion.ul initial={{y:'-100%'}} animate={{y:display? 80:'-100%'}} transition={{duration:1}} className={`${display?'block       ':'hidden'} border-2 border-white w-[100%] left-0 absolute bg-white flex flex-col text-black `}>
+<motion.ul initial={{y:'-100%'}} animate={{y:display? 80:'-100%'}} transition={{duration:1}} className={`${display?'block       ':'hidden'} md:hidden border-2 border-white w-[100%] left-0 fixed bg-white flex flex-col text-black `}>
     <li className='text-[14.4px]  p-2
  
  cursor-pointer

@@ -3,12 +3,15 @@ import googlePlay1 from '../assets/google-play.png'
 import huaweiPlay from '../assets/huawei-download.092f352.png'
 import hubtelPledge from '../assets/hubtel-pledge.svg'
 import  {FaInstagram,FaTwitter,FaFacebook,FaLinkedin} from 'react-icons/fa'
+import playStore from '../assets/playstore.537fc7a (1).svg'
+import appleStore from '../assets/appstore.e980235 (1).svg'
+import huaweiStore from '../assets/appgallery.d78cdee (1).svg'
 
 function Footer(){
     return (
         <div className=''>
         <div className='flex flex-row bg-[#fff4cc] justify-around pt-10  p-6 border-b-[1px] border-b-[#f7961c]'>
-
+<div className='flex flex-col gap-6 md:flex md:flex-row md:gap-12'>
 <div id='firstFooter'>
     <img src={hubtelPledge}/>
 
@@ -35,7 +38,9 @@ function Footer(){
 </li>
 </ul>
 </div>
+</div>
 
+<div className='flex flex-col flex flex-col-reverse  mb-auto gap-12 md:flex md:flex-row md:gap-12'>
 <div id='thirdFooter'>
     <h1 className='font-bold'>
         Other Services 
@@ -47,22 +52,31 @@ function Footer(){
     </ul>
 </div>
 
-<div id='fourthFooter' className='flex flex-col'>
+<div id='fourthFooter' className='flex flex-col gap-2 '>
 <h1 className='font-bold'>Install the app</h1>
 
-<div className='flex flex-row gap-2'>
+<div className='md:flex md:flex-row md:gap-2 hidden md:block'>
 <img src={googlePlay} height='45px' width='147px' className='cursor-pointer'/>
 <img src={googlePlay1} height='45px' width='130px' className='cursor-pointer'/>
 <img src={huaweiPlay} height='45px' width='148px' className='cursor-pointer'/>
 
 </div>
+
+<div className='flex flex-row'>
+<img src={playStore} className='w-[30px]'/>
+<img src={appleStore} className='w-[30px]'/>
+<img src={huaweiStore} className='w-[30px]'/>
+
+
+</div>
 </div>
         </div>
+        </div>
 
-        <div className='flex flex-row items-center bg-[#fff4cc] justify-between p-6 px-16 '>
+        <div className='md:flex md:flex-row flex flex-col items-center flex-col-reverse p-2 gap-2 md:items-center bg-[#fff4cc] md:justify-between md:p-6 md:px-16 '>
 
 <div className='flex flex-row gap-2'>
-         &copy; 2005-2023 <h2 className='text-[#01C7B1] font-bold'>
+         &copy; 2005-2023 <h2 className='text-[#01C7B1] font-semibold'>
                 Hubtel
             </h2>
             </div>
