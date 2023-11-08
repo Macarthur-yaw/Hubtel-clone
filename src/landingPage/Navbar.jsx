@@ -117,16 +117,16 @@ function Navbar(){
  
     < ul className='hidden group-hover:block absolute border-2 border-white  top-[99%] text-[15px] pt-2 bg-white left-[87.4%] shadow-sm'>
      <li className='hover:bg-[#ECFFFD] p-4'>
-         Service Providers
+ <Link to='/Service'>       Service Providers</Link> 
      </li>
      <li className='hover:bg-[#ECFFFD] p-4'>
-         Shops
+      <Link to='/Shops'>   Shops</Link>
      </li>
  <li className='hover:bg-[#ECFFFD] p-4'>
-     Riders
+   <Link to='/Riders'>  Riders</Link>
  </li>
  <li className='hover:bg-[#ECFFFD] p-4'>
-     Restaurants
+ <Link to='/Restaurant'>    Restaurants</Link>
  </li>
  
      </ul>

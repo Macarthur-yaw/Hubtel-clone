@@ -11,6 +11,10 @@ import Footer from './landingPage/Footer'
 import Raise from './RouterPages/GrowRevenuesPages/Raise'
 import HubtelRev from './RouterPages/GrowRevenuesPages/HubtelRev'
 import HubtelRev2 from './RouterPages/GrowRevenuesPages/HubtelRev2'
+import Service from './RouterPages/ServePages/Service'
+import Riders from './RouterPages/ServePages/Riders'
+import Shops from './RouterPages/ServePages/Shops'
+import Restaurant from './RouterPages/ServePages/Restaurant'
 
 function App() {
 
@@ -31,6 +35,10 @@ function App() {
 <Route path='/Hospitals' element={<HubtelRev/>}/>
 <Route path='/Government' element={<HubtelRev2/>}/>
 
+<Route path='/Service' element={<Service/>}/>
+<Route path='/Riders' element={<Riders/>}/>
+<Route path='/Shops' element={<Shops/>}/>
+<Route path='/Restaurant' element={<Restaurant/>}/>
 
 </Routes>
 <Footer/>
