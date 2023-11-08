@@ -1,18 +1,31 @@
 import { Link } from 'react-router-dom'
 import Hubtel from '../assets/hubtellogo.png'
-import  {FaCaretDown} from 'react-icons/fa'
-
+import  {FaCaretDown,FaBars} from 'react-icons/fa'
+import { useState } from 'react'
+import { motion } from 'framer-motion'
 function Navbar(){
+    const[display,setDisplay]=useState(false)
+    function displayMenu(){
+        setDisplay(!display)
+        console.log('hello');
+
+    }
     return (
-     <div className='flex flex-row px-4 z-10 fixed w-[100%] bg-white  justify-between items-center'>
+<div>
+<div className='flex border-b-[1px] md:border-b-none border-b-gray-100 flex-row py-4 px-4 md:py-0 z-10 fixed w-[100%] bg-white  justify-between items-center'>
          
       <div>
       <img src={Hubtel} width='100px' height='28px'  alt='a logo of the company'/>
  
       </div>
          
+         <span onClick={displayMenu} className='p-4 hover:bg-gray-100 hover:border-gray-100 cursor-pointer rounded-full'>
+ <FaBars className='block md:hidden text-xl '/>
+ </span>
+
  
- <ul className='flex flex-row gap-4 items-center'>
+
+ <ul className='hidden md:block md:flex md:flex-row md:gap-4 md:items-center'>
      <li className='text-[14.4px]  p-6
  border-2 
  border-white
@@ -140,7 +153,67 @@ function Navbar(){
  
  
              </div>
-    )
+<div>
+<motion.ul initial={{y:'-100%'}} animate={{y:display? 80:'-100%'}} transition={{duration:1}} className={`${display?'block       ':'hidden'} border-2 border-white w-[100%] left-0 absolute bg-white flex flex-col text-black `}>
+    <li className='text-[14.4px]  p-2
+ 
+ cursor-pointer
+    border-b-[1px]
+    
+     '>
+         Make Orders
+     </li>
+ <li className='text-[14.4px]
+  p-2
+flex flex-row
+  items-center
+ cursor-pointer
+    border-b-[1px]
+    gap-2
+ '>
+     Take Payment
+     <FaCaretDown/>
+ 
+ </li>
+ 
+ 
+ <li className='text-[14.4px]
+ p-2
+ flex flex-row
+ items-center
+ gap-2
+ border-b-[1px]
+ '>
+     Grow revenue
+     <FaCaretDown/>
+    
+ 
+ 
+ </li>
+ 
+ <li className='text-[14.4px]
+ p-2
+ border-b-[1px]
+ '>
+     Send SMS
+ </li>
+ 
+ <li className='text-[14.4px]
+ p-2
+ border-b-[1px] gap-2 flex flex-row items-center
+ '>
+     Serve with us
+     <FaCaretDown/>
+ 
+ 
+ </li>
+
+
+        </motion.ul>
+
+</div>
+</div>
+)
  }
 
  export default Navbar;
