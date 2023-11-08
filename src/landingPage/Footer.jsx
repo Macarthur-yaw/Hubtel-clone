@@ -26,7 +26,7 @@ function Footer(){
 <h1 className='font-bold'>
     Company
 </h1>
-<ul>
+<ul className='list-none text-[12px] md:text-auto'>
     <li>
         Leadership & Team
     </li>
@@ -46,7 +46,7 @@ function Footer(){
         Other Services 
     </h1>
 
-    <ul>
+    <ul className='list-none text-[12px]'>
        <li>Premium Subscription</li>
        <li>Connect to APIs</li> 
     </ul>
@@ -75,14 +75,14 @@ function Footer(){
 
         <div className='md:flex md:flex-row flex flex-col items-center flex-col-reverse p-2 gap-2 md:items-center bg-[#fff4cc] md:justify-between md:p-6 md:px-16 '>
 
-<div className='flex flex-row gap-2'>
+<div className='flex flex-row gap-2 text-[13px] md:text-auto'>
          &copy; 2005-2023 <h2 className='text-[#01C7B1] font-semibold'>
                 Hubtel
             </h2>
             </div>
 
 <div className='flex flex-row items-center  gap-2'>
-            <h3 className='text-[#01C7B1] font-bold'>Our offices</h3> |
+            <h3 className='text-[#01C7B1] font-bold text-[12px] md:text-auto'>Our offices</h3> |
        <span className='inline-flex gap-2'>
          <FaInstagram className='text-[25px]'/>
          <FaTwitter className='text-[25px]'/>

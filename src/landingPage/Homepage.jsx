@@ -28,19 +28,19 @@ setImag(imgName)
     }
     return(
       <div>
-      <div className='pt-[28%] flex flex-col items-center md:flex md:flex-col md:absolute md:gap-2 md:items-center   md:top-[15%] md:left-1/2 md:transform md:-translate-x-1/2'>
+      <div className='pt-[28%] flex flex-col gap-2 items-center md:flex md:flex-col md:absolute md:gap-2 md:items-center   md:top-[15%] md:left-1/2 md:transform md:-translate-x-1/2'>
             <h1 className='md:text-[32px] text-[20px] font-bold text-center'>
                 Find and pay
                 <br/>
                   for everyday essentials
             </h1> 
 
-<h3 className='text-semibold '>
+<h3 className='text-semibold text-[12px] '>
     from local retailers,food vendors and service providers
 </h3>
 
 <div>
-    <div className='flex flex-row   md:h-[53.58px] p-2  md:w-[439px] w-[120%] bg-white border-[1px] border-white bg-[#f2f2f2] rounded-md'>
+    <div className='flex flex-row   md:h-[53.58px] p-2  md:w-[439px] w-[120%]  border-[1px] border-white bg-[#f2f2f2] rounded-md'>
 
     <img src={locationArrow} alt='a location arrow' width='17px'/>
     <input type='text'
