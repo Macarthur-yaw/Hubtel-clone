@@ -5,10 +5,30 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 function Navbar(){
     const[display,setDisplay]=useState(false)
-    function displayMenu(){
+   const[content,setContent]=useState(false)
+   const[revenue,setRevenue]=useState(false)
+   const[serve,setServe]=useState(false)
+   function displayMenu(){
         setDisplay(!display)
         console.log('hello');
 
+    }
+    function displayContent(){
+        setContent(prevState=>!prevState)
+        setRevenue(false)
+setServe(false)
+    }
+
+    function displayRevenue(){
+        setRevenue(prevState=>!prevState)
+        setContent(false)
+        setServe(false)
+    }
+
+    function displayServe(){
+        setServe(prevState=>!prevState)
+        setContent(false)
+        setRevenue(false)
     }
     return (
 <div>
@@ -155,7 +175,9 @@ function Navbar(){
              </div>
 <div>
 <motion.ul initial={{y:'-100%'}} animate={{y:display? 80:'-100%'}} transition={{duration:1}} className={`${display?'block       ':'hidden'} md:hidden border-2 border-white w-[100%] left-0 fixed bg-white flex flex-col text-black `}>
-    <li className='text-[14.4px]  p-2
+    <li
+    
+    className='text-[14.4px]  p-2
  
  cursor-pointer
     border-b-[1px]
@@ -163,6 +185,7 @@ function Navbar(){
      '>
          Make Orders
      </li>
+<span className='flex flex-col'>
  <li className='text-[14.4px]
   p-2
 flex flex-row
@@ -170,44 +193,103 @@ flex flex-row
  cursor-pointer
     border-b-[1px]
     gap-2
- '>
+ ' onClick={displayContent}>
      Take Payment
      <FaCaretDown/>
+
+
+
+
+
  
  </li>
+ {content && (
+    <div>
+       <ul className='   border-2 border-white pt-2  text-[13px]  bg-white shadow-sm'>
+       <li className='hover:bg-[#ECFFFD] p-4'>
+        <Link to='/Request'>Request money from anyone</Link>   
+       </li>
+       <li className='hover:bg-[#ECFFFD] p-4'>
+      <Link to='/Charge'>Charge Customers in store</Link>     
+       </li>
+   <li className='hover:bg-[#ECFFFD] p-4'>
+     <Link to='/inter'>Integrate online checkout</Link>  
+   </li>
+       </ul>
+       </div>
+)
+    } 
+
+
+ </span>
  
- 
+ <span className='flex flex-col'>
  <li className='text-[14.4px]
  p-2
  flex flex-row
  items-center
  gap-2
- border-b-[1px]
- '>
+ border-b-[1px] cursor-pointer
+ ' onClick={displayRevenue}>
      Grow revenue
      <FaCaretDown/>
     
  
  
  </li>
- 
+ {revenue && (
+      <ul className=' border-2 border-white  text-[13px] pt-2 bg-white shadow-sm'>
+      <li className='hover:bg-[#ECFFFD] p-4'>
+        <Link to='/Raise'>RaiseUp for schools </Link>  
+      </li>
+      <li className='hover:bg-[#ECFFFD] p-4'>
+       <Link to='/Hospitals'>Hubtel for Hospitals</Link>   
+      </li>
+  <li className='hover:bg-[#ECFFFD] p-4'>
+   <Link to='/Government'>   Hubtel for Government</Link>
+  </li>
+      </ul>
+  
+  
+ )}
+ </span>
  <li className='text-[14.4px]
  p-2
  border-b-[1px]
+ cursor-pointer
  '>
      Send SMS
  </li>
  
- <li className='text-[14.4px]
+ <span> <li className='text-[14.4px]
  p-2
- border-b-[1px] gap-2 flex flex-row items-center
- '>
+ border-b-[1px] gap-2 flex flex-row cursor-pointer items-center
+ ' onClick={displayServe}>
      Serve with us
      <FaCaretDown/>
  
  
  </li>
 
+{serve && (
+    < ul className='border-2 border-white   text-[13px] pt-2 bg-white  shadow-sm'>
+    <li className='hover:bg-[#ECFFFD] p-4'>
+<Link to='/Service'>       Service Providers</Link> 
+    </li>
+    <li className='hover:bg-[#ECFFFD] p-4 cursor-pointer'>
+     <Link to='/Shops'>   Shops</Link>
+    </li>
+<li className='hover:bg-[#ECFFFD] p-4 cursor-pointer'>
+  <Link to='/Riders'>  Riders</Link>
+</li>
+<li className='hover:bg-[#ECFFFD] p-4 cursor-pointer'>
+<Link to='/Restaurant'>    Restaurants</Link>
+</li>
+
+    </ul>
+
+)}
+ </span>
 
         </motion.ul>
 

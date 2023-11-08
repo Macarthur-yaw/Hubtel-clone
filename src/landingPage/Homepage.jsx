@@ -28,7 +28,7 @@ setImag(imgName)
     }
     return(
       <div>
-      <div className='pt-[28%] flex flex-col gap-2 items-center md:flex md:flex-col md:absolute md:gap-2 md:items-center   md:top-[15%] md:left-1/2 md:transform md:-translate-x-1/2'>
+      <div className='pt-[28%] md:pt-0 flex flex-col gap-2 items-center md:flex md:flex-col md:absolute md:gap-2 md:items-center   md:top-[15%] md:left-1/2 md:transform md:-translate-x-1/2'>
             <h1 className='md:text-[32px] text-[20px] font-bold text-center'>
                 Find and pay
                 <br/>
@@ -66,23 +66,23 @@ setImag(imgName)
 <img src={backgroundImage}/>
 </div>
 
-<div className='hidden md:absolute md:left-1/2 md:transform md:-translate-x-1/2 md:top-[55%] md:z-8'>
+<div className='hidden md:block md:absolute md:left-1/2 md:transform -translate-x-1/2 md:top-[55%] z-8'>
     <img src={basket} className='w-[90%]'/>
 
 </div>
 
-<div className=''>
+<div className='md:hidden'>
     <img src={basketTwo} className=''/>
 
 </div>
 
 
 
-<div className='hidden md:absolute md:left-1/2 md:transform md:-translate-x-1/2 md:top-[65%] md:animate-bounce'>
+<div className='hidden md:block md:absolute md:left-1/2 md:transform md:-translate-x-1/2 md:top-[65%] md:animate-bounce'>
     <img src={sure} className='w-[35%]'/>
 </div>
 
-<div className='hidden md:absolute md:left-1/2 md:transform md:-translate-x-1/2 '>
+<div className='hidden md:block md:absolute md:left-1/2 md:transform md:-translate-x-1/2 '>
     <img src={ribbon} className='w-[29%]'/>
 </div>
 
@@ -141,7 +141,7 @@ onMouseEnter={()=>changeImage(side2)} >
 <div>
 
   
-<div className='flex flex-col  justify-center  gap-10  pt-10 py-10'>
+<div className='flex flex-col md:flex md:flex-row md:items-center  justify-center  gap-10  pt-10 py-10'>
     <div className=''>
     <h1 className='md:text-[24px] text-[20px] font-bold w-[100%] text-left p-2'>
         Experience the Hubtel app 
