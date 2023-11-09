@@ -49,7 +49,7 @@ const getData=requestContent.map((content)=>{
 
 <img src={content.imgUrl} className=' rounded-md'/>
 </div>
-<div className='text-center w-[70%]'>
+<div className='text-center md:w-[70%]'>
 <h5 className='font-bold '>{content.title}
 </h5>
 

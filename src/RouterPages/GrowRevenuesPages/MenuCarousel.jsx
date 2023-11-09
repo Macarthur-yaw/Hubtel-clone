@@ -1,5 +1,9 @@
-import schoolsApp from '../../assets/schools-app.png';
-import RequestCard from '../TakePaymentPages/RequestCard';
+import React from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+// import schoolsApp from '../../assets/schools-app.png';
+// import RequestCard from '../TakePaymentPages/RequestCard';
 import lineButton from '../../assets/untitled.png'
 import classButton from '../../assets/untitled (2).png'
 import studentButton from '../../assets/untitled (3).png'
@@ -13,9 +17,9 @@ import classPic from '../../assets/classes.png'
 import studentPic from '../../assets/students.png'
 import messages from '../../assets/messages.png'
 import schoolFees from '../../assets/school-fees.png'
-import schoolsPatners from '../../assets/schools-partners.png'
-import Slider from 'react-slick';
-import MenuCarousel from './MenuCarousel';
+// import schoolsPatners from '../../assets/schools-partners.png'
+// import Slider from 'react-slick';
+// import MenuCarousel from './MenuCarousel';
 
 
 const  content1={
@@ -60,62 +64,29 @@ imgUrl:liveActivity
         imgUrl:liveActivity
     }
 
-const Raise = () => {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-      };
-    const[content,setContent]=useState(null)
-    function changeContent(objtContent){
+
+
+
+const MenuCarousel = () => {
+  const settings = {
+    
+    infinite: false,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+  };
+  const[content,setContent]=useState(null)
+  function changeContent(objtContent){
 setContent(objtContent)
 
-    }
+  }
 
-    return (
-    <div>
-      <div className='pt-[100px] flex flex-col items-center md:flex md:flex-row bg-[#FFEA99] md:items-center  md:justify-around '>
-        <div className='flex flex-col items-center'>
-          <h1 className="font-semibold md:text-[40px] text-[20px] ">
-            Inspiring parents to help
-            <br/>
-             schools run smoothly
-          </h1>
 
-          <h3 className="text-[16px] text-center">
-            RaiseUp makes it simple for busy parents to get
-            <br></br>
-             more control and visibility over non-academic activities.
-          </h3>
-
-          <button className="border-2 border-[#01c7b1] p-2 text-white bg-[#01c7b1] hover:bg-[#266] hover:border-[#266] text-[13px] font-bold rounded-md">
-            INSTALL RAISEUP
-          </button>
-        </div>
-        <div className=' md:w-[53%] '>
-          <img src={schoolsApp} className='md:w-[100%]'/>
-        </div>
-      </div>
-
-      <div>
-        <RequestCard/>
-
-      </div>
-
-      <div className='pt-10 flex flex-col gap-6'>
-        <div id='text' className='flex flex-col items-center text-center gap-2'>
-<h1 className='text-bold md:text-[28px] text-[20px]'>What can RaiseUp do for your school?</h1>
-
-<h3 className='font-semibold text-[16px] md:text-[20px]'>
-    Here are some key features to make collaboration esier for a child's parents,
-    <br/>
-    family,school administrators, and teachers.
-</h3>
-        </div>
-
-<div id='buttons' className='hidden md:block border-2 border-white bg-white rounded-lg shadow-lg mx-auto p-4 md:flex md:flex-row md:gap-12 md:w-[85%] gap-4 md:px-16'>
+  return (
+    <div className='w-full '>
+      
+      <div id='buttons' className=' border-2 border-white bg-white rounded-lg shadow-lg mx-auto p-4 md:flex md:flex-row md:gap-12 md:w-[85%] gap-4 md:px-16'>
+      <Slider {...settings}>
 <button
 onClick={()=>changeContent(content1)}
 className='inline-flex items-center flex-col md:text-[18px] text-[13px] font-semibold text-[#3395ff]'>
@@ -164,9 +135,12 @@ className='inline-flex items-center flex-col md:text-[18px] text-[13px] font-sem
     <img src={moreButton} className='w-[20px] h-[20px]'/>
     And more access
 </button>
-
+</Slider>
 </div>
-<div className='hidden md:block'>
+
+
+     
+      <div className=''>
     {content && <div className='flex flex-row items-center justify-evenly'>
        
         <img src={content.imgUrl} width='35%' className=''/>
@@ -176,37 +150,8 @@ className='inline-flex items-center flex-col md:text-[18px] text-[13px] font-sem
        </span>  </div>}
 </div>
 
-<div className='mx-auto'>
-<button className='text-white border-2 border-[#01c7b1] bg-[#01c7b1] text-[13px] font-bold w-fit p-2 rounded-lg'>
-    SIGN UP YOUR SCHOOL NOW
-</button>
-</div>
-
-      </div>
-
-<div className='mt-10 bg-[#E9F3FF]'>
-<div id='subRequest' className='md:flex md:flex-row md:w-[80%] flex-col-reverse md:mx-auto pt-10 flex flex-col items-center bg-[#E9F3FF]'>
-
-<div id='leftSection' className='md:w-[40%] p-2 flex flex-col items-center gap-2'>
-<h1 className='text-[20px] font-bold'>
-    Make it super easy for parents to pay school fees & bills.
-</h1>
-<h3>
-Take away the hard work of queuing at specific banks and reconciling payments. Receive payments via mobile money, card or deposit at any bank branch across Ghana.
-
-</h3>
-<button className='text-white border-2 border-[#01c7b1] bg-[#01c7b1] text-[13px] font-bold w-fit p-2 rounded-lg'>GET STARTED NOW</button>
-
-</div>
-
-<div id='rightSection'>
-<img src={schoolsPatners} className=''/>
-</div>
-</div>
-</div> 
-<MenuCarousel/>
- </div>
+    </div>
   );
-}
+};
 
-export default Raise;
+export default MenuCarousel;
