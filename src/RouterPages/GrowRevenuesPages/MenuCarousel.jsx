@@ -69,12 +69,13 @@ imgUrl:liveActivity
 
 const MenuCarousel = () => {
   const settings = {
-    
     infinite: false,
-    speed: 50,
+    speed: 400,
     slidesToShow: 3,
     slidesToScroll: 1,
-  };
+    variableWidth: true,    
+
+};
   const[content,setContent]=useState(null)
   function changeContent(objtContent){
 setContent(objtContent)
@@ -83,9 +84,9 @@ setContent(objtContent)
 
 
   return (
-    <div className='w-full '>
+    <div className='flex flex-row '>
       
-      <div id='buttons' className=' border-2 border-white bg-white rounded-lg shadow-lg mx-auto p-4 md:flex md:flex-row md:gap-12 md:w-[85%] gap-4 md:px-16'>
+      <div id='buttons' className=' border-2 border-white bg-white rounded-lg shadow-lg mx-auto p-4 md:flex md:flex-row gap-12 w-[85%] gap-4 px-16'>
       <Slider {...settings}>
 <button
 onClick={()=>changeContent(content1)}
