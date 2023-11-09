@@ -84,9 +84,9 @@ setContent(objtContent)
 
 
   return (
-    <div className='flex flex-row '>
+    <div className=' '>
       
-      <div id='buttons' className=' border-2 border-white bg-white rounded-lg shadow-lg mx-auto p-4 md:flex md:flex-row gap-12 w-[85%] gap-4 px-16'>
+      <div id='buttons' className=' border-2 border-white bg-white rounded-lg shadow-lg mx-auto p-4 md:flex md:flex-row gap-16 w-[80%] gap-4 px-16'>
       <Slider {...settings}>
 <button
 onClick={()=>changeContent(content1)}
