@@ -12,29 +12,29 @@ const Charge = () => {
 
         <div className='md:grid md:grid-cols-2 pt-20 md:place-items-center  flex flex-col justify-center gap-6'>
              
-             <div className='md:w-[58%] w-[60%] mx-auto  flex flex-col items-center gap-4'>
+             <div className='md:w-[58%]  mx-auto  flex flex-col items-center gap-4'>
 
-                <h1 className='text-[25px] font-bold-200 text-center '>
+                <h1 className='text-[22px] font-bold-200 text-center '>
                 Take card & mobile money payments at your pay point
                 </h1>
 
-                <h3 className='text-[20px] font-semibold'>
+                <h3 className='text-[18px] text-center font-semibold'>
                 Join thousands of smart businesses – from savvy start-ups to expanding enterprises – using a Hubtel card machine.
 
                 </h3>
 
-                <button className='text-[#01c7b1] bg-[#01c7b1] border-[#01c7b1] border-2 text-white p-2 rounded-md w-[30%]'>
+                <button className='text-[#01c7b1] bg-[#01c7b1] border-[#01c7b1] border-2 text-white p-2 rounded-md '>
                     GET STARTED
                 </button>
              </div>
 
              <div>
-<img src={backgroundPicture} alt='a man and a woman' className='md:max-w-[75%] w-[50%] mx-auto'/>
+<img src={backgroundPicture} alt='a man and a woman' className='md:max-w-[75%]  mx-auto p-4'/>
              </div>
 
              </div>
         
-        <div className='md:grid md:grid-cols-2 flex flex-col gap-2 flex-col-reverse pt-[13%] md:place-items-center md:items-center md:justify-evenly p-4'>
+        <div className='md:grid md:grid-cols-2 p-4 flex flex-col gap-2 flex-col-reverse pt-[13%] md:place-items-center md:items-center md:justify-evenly py-20'>
 <div className='flex flex-col'>
             <div  className='flex flex-col'>
             <h1 className='font-semibold text-[25px]'>

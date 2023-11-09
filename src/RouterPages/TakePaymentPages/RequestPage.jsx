@@ -9,7 +9,7 @@ const Request = () => {
         
         <div className='md:grid md:grid-cols-2 flex flex-col items-center justify-center bg-[#f8f9fb] pt-20 md:place-items-center '>
             <div className='p-4 px-10 flex flex-col items-center gap-4'>
-                <h1 className='md:text-[30px] text-[18px] font-bold '>
+                <h1 className='md:text-[30px] text-center text-[18px] font-bold '>
                     Take payments from anyone,anytime
                 </h1>
 
@@ -17,7 +17,7 @@ const Request = () => {
                 Send SMS to notify your your contacts, and collect payments from as many people as possible.
                 </h3>
 
-                <button className='border-[#01c7b1] md:w-[50%] w-[30%] bg-[#01c7b1] font-bold p-2 rounded-md text-white text-[13px]'>
+                <button className='border-[#01c7b1] md:w-[50%] w-[40%] bg-[#01c7b1] font-bold p-2 rounded-md text-white text-[13px]'>
                     START NOW
                 </button>
             </div>
@@ -57,7 +57,7 @@ You can also distribute money to any large group in a few steps.
 
 </div>
 
-<div className='md:grid md:grid-cols-2 flex flex-col flex-col-reverse gap-2 md:items-center md:place-items-center pt-20 pb-20'>
+<div className='md:grid md:grid-cols-2 p-2 flex flex-col flex-col-reverse gap-2 md:items-center md:place-items-center pt-20 pb-20'>
 
     <div className='md:w-[70%]'>
         <h1 className='md:text-[30px] text-[20px] font-bold'>
