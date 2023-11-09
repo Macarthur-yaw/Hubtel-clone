@@ -108,7 +108,7 @@ setContent(objtContent)
     family,school administrators, and teachers.
 </h3>
         </div>
-      <div className='md:hidden'>
+      <div className='md:hidden w-[100%]'>
         <MenuCarousel/>
         </div>
 <div id='buttons' className='hidden md:block border-2 border-white bg-white rounded-lg shadow-lg mx-auto p-4 md:flex md:flex-row md:gap-12 md:w-[85%] gap-4 md:px-16'>

@@ -75,11 +75,11 @@ const MenuCarousel = () => {
 
   return (
     <div className=''>
-      <div id='buttons' className='border-2 border-white bg-white rounded-lg shadow-lg mx-auto p-4 md:flex md:flex-row md:gap-6 w-full gap-4 px-16'>
-        <Slider {...settings}>
+      <div id='buttons' className='border-2 border-white bg-white rounded-lg shadow-lg mx-auto p-4 md:flex md:flex-row md:gap-6 w-[100%] gap-4 px-16'>
+        <Slider {...settings} style={{width:'120%'}}>
           <button
             onClick={() => changeContent(content1)}
-            className='inline-flex items-center flex-col  md:text-[18px] text-[13px] font-semibold text-[#3395ff] p-2'
+            className='inline-flex items-center flex-col   md:text-[18px] text-[13px] font-semibold text-[#3395ff] p-2'
           >
             <img src={lineButton} className='w-[15px] h-[15px] mx-auto' alt='Live Activity' />
             Live Activity
