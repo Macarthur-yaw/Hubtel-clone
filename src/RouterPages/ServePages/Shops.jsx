@@ -11,7 +11,7 @@ const Shops = () => {
     return ( 
         <div className='py-20'>
             <div>
-<img src={shopsHero} alt='shops-hero' className='h-[400px] w-full'/>
+<img src={shopsHero} alt='shops-hero' className='md:h-[400px] w-full '/>
 
 <div className=' absolute top-20 left-1/2  transform -translate-x-1/2 w-full h-[400px] bg-black  bg-opacity-50 text-center  '>
 <div className=' absolute top-1/2 transform -translate-y-1/2 left-1/2 transform -translate-x-1/2'>
@@ -29,10 +29,10 @@ const Shops = () => {
 
             <div className='flex flex-row items-center justify-between p-4'>
                 <span className='flex flex-col gap-2'>
-                    <h1 className='text-[30px] font-semibold'>
+                    <h1 className='md:text-[30px] font-semibold'>
                     Increase your sales by up to 38%
                     </h1>
-                    <h3 className='text-[20px]'>
+                    <h3 className='md:text-[20px]'>
                     Bid to supply your goods to paid-up customers from your community.
                     </h3>
 

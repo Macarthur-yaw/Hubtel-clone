@@ -130,40 +130,39 @@ setContent(objtContent)
 
     }
 const[slideIndex,setSlideIndex]=useState(0)
-useEffect(()=>{
- setInterval(()=>{setSlideIndex((prevIndex)=>(prevIndex+1))},
- 2000);
-// return ()=> clearInterval(interval)
+useEffect(() => {
+    const interval = setInterval(() => {
+        setSlideIndex((prevIndex) => (prevIndex + 1) % professions.length);
+    }, 3500);
 
-},[])
+    return () => clearInterval(interval);
+}, [slideIndex]);
+
 
     return (
         <div className='pt-20'>
             
             <div className='bg-[#CCFFEF] p-4 flex flex-col gap-6 items-center justify-center'>
             <div className='text-center flex flex-col gap-2 items-center'>
-                <h1 className='text-[30px] md:block hidden font-bold'>
+                <h1 className='text-[30px]  font-bold'>
                     You take well of our unwell 
-<br/>
-<AnimatePresence>
+
+                    <AnimatePresence>
   {professions.map((source, index) => (
     <motion.div
       key={index}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 1 }}
+      initial={{ opacity: 0 ,y:20}}
+      animate={{ opacity: 10 ,y:0}}
+      exit={{ opacity: 0,y:-20 }}
+      transition={{ duration: 30 }}
+      className={`${index === slideIndex ? 'block' : 'hidden'}`}
     >
-      <p className={`${index === slideIndex ? 'block' : 'hidden'}`}>
-        {source.content}
-      </p>
+      <p className='text-[#F7961C] font-semibold'>{source.content}</p>
     </motion.div>
   ))}
 </AnimatePresence>
-
-
                 </h1>
-                <h1>
+                <h1 className='md:block hidden'>
                     You take care of our unwell<br/>
 
                 </h1>
@@ -173,13 +172,13 @@ useEffect(()=>{
                 <button className='text-[white] w-[40%]  border-2 border-[#01c7b1] bg-[#01c7b1] font-bold p-2 shadow-md rounded-md'>Contact us to Unboard</button>
             </div>
             <div>
-                <img src={hospitalBg} width='80%' className='mx-auto'/>
+                <img src={hospitalBg}  className='mx-auto md:w-[80%]'/>
             </div>
             </div>
 
             <div className='flex flex-col gap-10 pt-20'>
                 <div className='text-center'>
-                    <h1 className='text-[22px] font-semibold'>
+                    <h1 className='md:text-[22px] text-[18px] font-semibold'>
                         Say Hello to a new kind of Healthcare collaboration
                     </h1>
 
@@ -190,13 +189,13 @@ useEffect(()=>{
 
                 </div>
             
-            <div className='flex flex-row'>
+            <div className='md:flex md:flex-row'>
                 {contentPage.map((content)=>(
-                    <div key={content.id} className='w-[40%]  flex flex-col items-center justify-center'>
+                    <div key={content.id} className='md:w-[40%]  flex flex-col items-center justify-center'>
 
-<img src={content.imgUrl}/>
+<img src={content.imgUrl} className='w-[60%]'/>
 
-<div className='w-[70%] text-center'>
+<div className='md:w-[70%] w-[50%] text-center'>
                        <h1 className='font-bold '>{content.title}</h1> 
                       <h5 className=''>  {content.content}</h5>
 </div>                        </div>
@@ -209,7 +208,7 @@ useEffect(()=>{
                 What Hubtel for Hospital can do for your healthcare operation?
                 </h1>
 
-                <div id='buttons' className='border-2 border-white bg-white rounded-lg shadow-lg mx-auto p-4 w-fit flex flex-row gap-12 w-[85%] px-16'>
+                <div id='buttons' className='hidden md:block border-2 border-white bg-white rounded-lg shadow-lg mx-auto p-4 w-fit flex flex-row gap-12 w-[85%] px-16'>
 
 <button
 onClick={()=>changeContent(content1)}
@@ -270,45 +269,45 @@ className='inline-flex items-center flex-col text-[18px] font-semibold text-[#33
                     Take your business to new levels
                 </h1>
 
-<div className='flex flex-row gap-20 justify-center mb-20'>
-                <ul className=' flex flex-col gap-4 list-none'>
-                    <li className='border-2 rounded-sm p-4 text-[22px] font-semibold bg-gray-100 border-gray-100'>
+<div className='md:flex md:flex-row md:gap-20 flex flex-col gap-4 items-center md:justify-center mb-20 p-2'>
+                <ul className=' flex flex-col gap-4  w-[80%] md:w-auto list-none'>
+                    <li className='border-2  rounded-sm p-4 md:text-[22px] font-semibold bg-gray-100 border-gray-100'>
                     Streamline your business to new levels
                     </li>
-                    <li className='border-2 p-4 rounded-sm bg-gray-100 text-[22px] font-semibold  border-gray-100'>
+                    <li className='border-2 p-4 rounded-sm bg-gray-100 md:text-[22px] font-semibold  border-gray-100'>
                     Improve your cash flow
                     </li>
 
-                    <li className='border-2 p-4 rounded-sm bg-gray-100 text-[22px] font-semibold border-gray-100'>
+                    <li className='border-2 p-4 rounded-sm bg-gray-100 md:text-[22px] font-semibold border-gray-100'>
                     Provide a better experience for your patients
                     </li>
 
-                    <li className='border-2 p-4 bg-gray-100 rounded-sm border-gray-100 text-[22px] font-semibold '>
+                    <li className='border-2 p-4 bg-gray-100 rounded-sm border-gray-100 md:text-[22px] font-semibold '>
                     Plug revenue leakages
                     </li>
 
-                    <li className='border-2 p-4 bg-gray-100 rounded-sm border-gray-100 text-[22px] font-semibold'>
+                    <li className='border-2 p-4 bg-gray-100 rounded-sm border-gray-100 md:text-[22px] font-semibold'>
                     Improve patient satisfaction
                     </li>
 
-                    <li className='border-2 p-4 bg-gray-100 rounded-sm border-gray-100 text-[22px] font-semibold'>
+                    <li className='border-2 p-4 bg-gray-100 rounded-sm border-gray-100 md:text-[22px] font-semibold'>
                     Grow your care business
                     </li>
                 </ul>
 
-                <img src={businessImage} className='max-w-[500px]'/>
+                <img src={businessImage} className='md:max-w-[500px] w-[80%]'/>
                 </div>
 
-                <div className='py-[5px] bg-[#E9F3FF] flex flex-row justify-center items-center p-4 py-20'>
-                    <span className='flex flex-col gap-2'>
-                        <h1 className='font-semibold text-[22px]'>
+                <div className='py-[5px] bg-[#E9F3FF] flex md:flex-row flex-col flex-col-reverse justify-center items-center p-4 py-20 gap-4'>
+                    <span className='flex flex-col md:gap-2 gap-4 items-center'>
+                        <h1 className='font-semibold text-[18px] md:text-[22px]'>
                         Make it super easy for patients and sponsors to pay bills
                         </h1>
-                        <h3 className=' font-normal text-[18px]'>
+                        <h3 className=' font-normal md:text-[18px] text-[15px] text-center'>
                         Take away the hard work of queuing at specific banks and reconciling payments. Receive payments via mobile money, cash deposit at <a href='' className='underline'>any bank branch across Ghana.</a>
 
                         </h3>
-                   <button className='bg-[#01c7b1] w-[20%] text-sm border-[#01c7b1] text-[13px] font-bold p-2 text-white rounded-md'>GET STARTED NOW</button>
+                   <button className='bg-[#01c7b1] md:w-[20%] mb-10 text-sm border-[#01c7b1] text-[13px] font-bold p-2 text-white rounded-md'>GET STARTED NOW</button>
                     </span>
 
                     <img src={schoolsPatners} className='max-w-[500px]'/>
