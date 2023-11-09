@@ -61,13 +61,7 @@ imgUrl:liveActivity
     }
 
 const Raise = () => {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-      };
+    
     const[content,setContent]=useState(null)
     function changeContent(objtContent){
 setContent(objtContent)
@@ -114,7 +108,9 @@ setContent(objtContent)
     family,school administrators, and teachers.
 </h3>
         </div>
-
+      <div className='md:hidden'>
+        <MenuCarousel/>
+        </div>
 <div id='buttons' className='hidden md:block border-2 border-white bg-white rounded-lg shadow-lg mx-auto p-4 md:flex md:flex-row md:gap-12 md:w-[85%] gap-4 md:px-16'>
 <button
 onClick={()=>changeContent(content1)}
@@ -188,10 +184,10 @@ className='inline-flex items-center flex-col md:text-[18px] text-[13px] font-sem
 <div id='subRequest' className='md:flex md:flex-row md:w-[80%] flex-col-reverse md:mx-auto pt-10 flex flex-col items-center bg-[#E9F3FF]'>
 
 <div id='leftSection' className='md:w-[40%] p-2 flex flex-col items-center gap-2'>
-<h1 className='text-[20px] font-bold'>
+<h1 className='md:text-[20px] text-[13px] text-center  font-semibold'>
     Make it super easy for parents to pay school fees & bills.
 </h1>
-<h3>
+<h3 className='text-center'>
 Take away the hard work of queuing at specific banks and reconciling payments. Receive payments via mobile money, card or deposit at any bank branch across Ghana.
 
 </h3>
@@ -204,7 +200,6 @@ Take away the hard work of queuing at specific banks and reconciling payments. R
 </div>
 </div>
 </div> 
-<MenuCarousel/>
  </div>
   );
 }
