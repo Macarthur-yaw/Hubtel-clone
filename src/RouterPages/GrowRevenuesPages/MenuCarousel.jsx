@@ -71,8 +71,8 @@ const MenuCarousel = () => {
   const settings = {
     
     infinite: false,
-    speed: 500,
-    slidesToShow: 2,
+    speed: 50,
+    slidesToShow: 3,
     slidesToScroll: 1,
   };
   const[content,setContent]=useState(null)
