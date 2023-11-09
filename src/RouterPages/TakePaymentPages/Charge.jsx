@@ -14,11 +14,11 @@ const Charge = () => {
              
              <div className='md:w-[58%]  mx-auto  flex flex-col items-center gap-4'>
 
-                <h1 className='text-[22px] font-bold-200 text-center '>
+                <h1 className='text-[20px] py-6 font-bold-200 font-semibold text-center '>
                 Take card & mobile money payments at your pay point
                 </h1>
 
-                <h3 className='text-[18px] text-center font-semibold'>
+                <h3 className='text-[167x] text-center '>
                 Join thousands of smart businesses – from savvy start-ups to expanding enterprises – using a Hubtel card machine.
 
                 </h3>

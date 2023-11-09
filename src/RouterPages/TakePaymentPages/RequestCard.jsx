@@ -43,13 +43,13 @@ const requestContent=[
 
 const getData=requestContent.map((content)=>{
     return (
-        <div key={content.id} className=' w-[80%]'>
+        <div key={content.id} className=' md:w-[80%]  w-[100%] flex flex-col items-center'>
 <div className='mx-auto'>
 
 
-<img src={content.imgUrl} className='max-w-[100%] rounded-md'/>
+<img src={content.imgUrl} className=' rounded-md'/>
 </div>
-<div className='text-center'>
+<div className='text-center w-[70%]'>
 <h5 className='font-bold '>{content.title}
 </h5>
 
@@ -60,8 +60,8 @@ const getData=requestContent.map((content)=>{
 })
 const RequestCard = () => {
     return ( 
-        <div className='flex flex-col gap-10 bg-[#FFFAEE] p-4'>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-4  pt-14  place-items-center'>
+        <div className='flex flex-col gap-10 bg-[#FFFAEE] p-4 '>
+        <div className='grid grid-cols-1  md:grid-cols-3 gap-4  pt-14  place-items-center'>
             {getData}
           
         </div>
