@@ -11,7 +11,7 @@ import noticeButton from '../../assets/icon3.png'
 import messageButton from '../../assets/icon4.png'
 import feeButton from '../../assets/icon5.png'
 import moreButton from '../../assets/untitled (7).png'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import liveActivity from '../../assets/live-activity.png'
 import classPic from '../../assets/classes.png'
 import studentPic from '../../assets/students.png'
@@ -19,7 +19,7 @@ import messages from '../../assets/messages.png'
 import schoolFees from '../../assets/school-fees.png'
 import schoolsPatners from '../../assets/schools-partners.png'
 import businessImage from '../../assets/business-image.png'
-
+import { motion,AnimatePresence } from 'framer-motion';
 const contentPage=[
     { id:1,
         title:"For Patients",
@@ -77,21 +77,94 @@ const  content1={
     
         }
         
-
+const professions=[
+    {id:1,
+    content:'retires'
+    },
+    {id:1,
+    content:'farmers'
+    },
+    {
+        id:3,
+        content:'lawyers'
+    },
+    {
+        id:4,
+        content:'engineers'
+    },
+    {id:5,
+    content:'teachers'
+    },
+    {
+        id:6,
+        content:'business people'
+    },
+    {
+        id:7,
+        content:'artisans'
+    },
+    {
+        id:8,
+        content:'engineers'
+    },
+    {id:9,
+    content:'entreprenuers'
+    }
+    ,{
+        id:10,
+        content:'mothers'
+    },
+    {
+        id:11,
+        content:'fathers'
+    }
+    ,{
+        id:12,
+        content:'children'
+    }
+]
 const HubtelRev = () => {
     const[content,setContent]=useState(null)
     function changeContent(objtContent){
 setContent(objtContent)
 
     }
+const[slideIndex,setSlideIndex]=useState(0)
+useEffect(()=>{
+ setInterval(()=>{setSlideIndex((prevIndex)=>(prevIndex+1))},
+ 2000);
+// return ()=> clearInterval(interval)
+
+},[])
 
     return (
         <div className='pt-20'>
             
             <div className='bg-[#CCFFEF] p-4 flex flex-col gap-6 items-center justify-center'>
             <div className='text-center flex flex-col gap-2 items-center'>
-                <h1 className='text-[30px] font-bold'>
-                    You take well of our unwell engineers.
+                <h1 className='text-[30px] md:block hidden font-bold'>
+                    You take well of our unwell 
+<br/>
+<AnimatePresence>
+  {professions.map((source, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
+    >
+      <p className={`${index === slideIndex ? 'block' : 'hidden'}`}>
+        {source.content}
+      </p>
+    </motion.div>
+  ))}
+</AnimatePresence>
+
+
+                </h1>
+                <h1>
+                    You take care of our unwell<br/>
 
                 </h1>
                 <h3 className='text-[20px] font-semibold'>

@@ -75,8 +75,8 @@ const MenuCarousel = () => {
 
   return (
     <div className=''>
-      <div id='buttons' className='border-2  border-white bg-white rounded-lg shadow-lg mx-auto p-4 md:flex md:flex-row md:gap-6 w-[100%] gap-4 md:px-16 px-2'>
-        <Slider {...settings} style={{width:'120%'}}>
+      <div id='buttons' className='border-2  border-white bg-white rounded-lg shadow-lg mx-auto p-4 md:flex md:flex-row md:gap-6 w-[100%] gap-4 px-16'>
+        <Slider {...settings} style={{width:'100%'}}>
           <button
             onClick={() => changeContent(content1)}
             className='inline-flex items-center flex-col   md:text-[18px] text-[13px] font-semibold text-[#3395ff] p-2'
