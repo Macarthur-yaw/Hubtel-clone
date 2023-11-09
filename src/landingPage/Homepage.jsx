@@ -10,7 +10,7 @@ import payIcon from '../assets/Wallet (2).png'
 import side1 from '../assets/side1.png'
 import side2 from '../assets/side2.png'
 import side3 from '../assets/side3.png'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import {motion} from 'framer-motion'
 import qrIcon from '../assets/qr-icon.png'
 import hubtelPhone from '../assets/MicrosoftTeams-image.png'
@@ -25,7 +25,12 @@ function Body(){
     const[imag,setImag]=useState(null)
     function changeImage(imgName){
 setImag(imgName)
+
     }
+
+    useEffect(()=>{
+changeImage(side1)
+    },[])
     return(
       <div>
       <div className='pt-[28%] md:pt-0 flex flex-col gap-2 items-center md:flex md:flex-col md:absolute md:gap-2 md:items-center   md:top-[15%] md:left-1/2 md:transform md:-translate-x-1/2'>

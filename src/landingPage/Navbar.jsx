@@ -34,11 +34,11 @@ setServe(false)
 <div>
 <div className='flex border-b-[1px] md:border-b-none border-b-gray-100 flex-row py-4 px-4 md:py-0 z-10 fixed w-[100%] bg-white  justify-between items-center'>
          
-      <div>
+    <Link to='/'>  <div>
       <img src={Hubtel} width='100px' height='28px'  alt='a logo of the company'/>
  
       </div>
-         
+      </Link>
          <span onClick={displayMenu} className='p-4 hover:bg-gray-100 hover:border-gray-100 cursor-pointer rounded-full'>
  <FaBars className='block md:hidden text-xl '/>
  </span>
