@@ -44,14 +44,14 @@ help public institutions modernize how citizens connect and pay for services.
 
 <div className='md:flex md:flex-col md:gap-10'>
     <div className='flex justify-center '>
-  <div className='md:flex md:flex-row  flex flex-col gap-4 md:gap-6'>
+  <div className='md:flex md:flex-row  flex flex-col gap-4 p-4 md:gap-6'>
     <CardImage Imageurl={graphicImage} title='Eliminate cash transactions and prevent revenue leakage' />
     <CardImage Imageurl={ladyImage} title='Make it easier for citizens to pay for services' />
     <CardImage Imageurl={graphImage} title='Increase revenue by reaching a wider audience' />
   </div>
 </div>
 <div className='flex justify-center'>
-  <div className='md:flex md:flex-row flex flex-col gap-4 mb-10 '>
+  <div className='md:flex md:flex-row flex flex-col gap-4 mb-10 p-4'>
     <CardImage Imageurl={peopleImage} title='Streamline processes, improve customer service, and make better decisions' />
     <CardImage Imageurl={phoneImage} title='Change lives by making it easier for citizens to access essential services' />
   </div>
@@ -59,8 +59,8 @@ help public institutions modernize how citizens connect and pay for services.
 </div>
 </div>
 
-<div className='pt-28 flex flex-col gap-10'>
-    <div className='flex md:flex-row flex-col flex-col-reverse w-[80%] mx-auto items-center justify-center gap-4'>
+<div className='pt-28 flex flex-col gap-10 '>
+    <div className='flex md:flex-row flex-col flex-col-reverse w-[80%] mx-auto items-center justify-center gap-4 '>
      
     <span className='md:w-[50%] text-left'>    <h1 className='font-semibold md:text-[30px] text-[20px]'>
             Stop Leakages
@@ -69,8 +69,9 @@ help public institutions modernize how citizens connect and pay for services.
         Hubtel for Government's robust and scalable payment platform can help you eliminate cash transactions and prevent revenue leakage. By connecting your revenue collection systems directly to the national banking systems, you can be sure that every pesewa is accounted for and settled directly to your bank accounts
 
         </h3></span>
+        <div className=''>
 <img src={leakagesImages} className='md:max-w-[520px]  rounded-lg'/>
-    </div>
+</div>  </div>
 
     <div className='flex md:flex-row flex-col w-[80%] mx-auto items-center justify-center gap-4'>
        
@@ -97,12 +98,12 @@ help public institutions modernize how citizens connect and pay for services.
 
                </h3>
                </span>
-               <img src={institutionPic} className='max-w-[520px] rounded-md'/>
+               <img src={institutionPic} className='md:max-w-[520px] rounded-md'/>
            </div>
 
            <div className='flex md:flex-row w-[80%] mx-auto flex-col gap-4 items-center justify-center'>
        
-           <img src={livesPic} className='max-w-[520px] rounded-md'/>
+           <img src={livesPic} className='md:max-w-[520px] rounded-md'/>
   <span className='md:w-[50%]'>
        <h1 className='md:text-[30px] text-[20px] font-semibold'>
 Change Lives               </h1>
@@ -125,10 +126,10 @@ Change Lives               </h1>
                         Take away the hard work of queuing at specific banks and reconciling payments. Receive payments via mobile money, cash deposit at <a href='' className='underline'>any bank branch across Ghana.</a>
 
                         </h3>
-                   <button className='bg-[#01c7b1] md:w-[20%] w-[30%] text-sm border-[#01c7b1] text-[13px] font-bold p-2 text-white rounded-md'>GET STARTED NOW</button>
+                   <button className='bg-[#01c7b1] md:w-[20%] w-[60%] text-sm border-[#01c7b1] text-[13px] font-bold p-2 text-white rounded-md'>GET STARTED NOW</button>
                     </span>
 
-                    <img src={schoolsPatners} className='max-w-[500px]'/>
+                    <img src={schoolsPatners} className='md:max-w-[500px]'/>
                 </div>
 
         </div>
@@ -138,7 +139,7 @@ function CardImage(props){
     return (
         <div className=' md:max-w-[50%] flex flex-col gap-4 items-center'>
 <img src={props.Imageurl} className='md:max-w-[330px]'/>
-<h1 className='font-semibold text-lg w-[62%]'>{props.title}</h1>
+<h1 className='font-semibold text-lg md:w-[62%]'>{props.title}</h1>
         </div>
     )
 }

@@ -9,7 +9,7 @@ const Service = () => {
     return ( 
         <div className='py-20'>
 
-            <div className='p-2 gap-12 md:w-[80%] w-[80%] mx-auto items-center md:absolute md:left-1/2 md:transform  md:-translate-x-1/2 md:top-1/4 flex md:flex-row flex-col  '>
+            <div className='p-2 gap-12 md:w-[80%] w-[100%] mx-auto items-center md:absolute md:left-1/2 md:transform  md:-translate-x-1/2 md:top-1/4 flex md:flex-row flex-col  '>
      <span className='flex flex-col gap-2 '>
         <h1 className='font-semibold md:text-[30px] text-[22px] text-center'>
         Extend the reach of your utility 
@@ -22,11 +22,11 @@ const Service = () => {
          with ease
         </h3>
 
-        <button className='border-2 md:w-[30%] text-[13px] bg-[#01c7b1] border-[#01c7b1] h-[35px] text-white  rounded'>
+        <button className='border-2 md:w-[30%] text-[13px] bg-[#01c7b1] border-[#01c7b1] md:h-[35px] p-2 w-[60%] mx-auto text-white  rounded'>
             START NOW
         </button>
      </span>
-     <img src={serviceProvider} className='md:w-[400px] w-[80%]' />
+     <img src={serviceProvider} className='md:w-[400px] w-[90%]' />
      </div>
 
      
@@ -35,19 +35,19 @@ const Service = () => {
      </div>
      
      <div className='p-4'>
-<h1 className=' text-[25px]  mt-10 font-semibold text-center '>
+<h1 className=' md:text-[25px] text-[20px]  mt-10 font-semibold text-center '>
     Trusted by top service providers
 </h1>
 
-<img src={bgSp} className='p-4'/>
+<img src={bgSp} className='p-4 '/>
      </div>
 
      <div className='bg-[#faf6ed] py-10'> 
-        <h1 className='font-semibold text-center md:text-[30px] text-[22px] mb-10'>
+        <h1 className='font-semibold text-center md:text-[30px] text-[22px] mb-10 p-2'>
             Distribute your service to transacting customers 
         </h1>
 
-        <div className='md:grid md:grid-cols-3 md:gap-4 flex flex-col gap-4 md:p-4 p-14'>
+        <div className='md:grid md:grid-cols-3 md:gap-4 flex flex-col gap-4 md:p-4 md:p-14 p-4'>
         <ServiceCard Title='Utility Top Ups' Content='PayTV, Internet, Closed-Community Grid Electricity/Water'/>
         <ServiceCard Title='Bill Payments' Content='Estate/Facility Management Fees, Hospitality Fees,'/>
         <ServiceCard Title='Paid Event Voting' Content='Reality TV Voting,Event Live Voting'/>
@@ -59,24 +59,24 @@ const Service = () => {
 
 
 <div className='mt-20 flex md:flex-row flex-col  items-center justify-center gap-10'>
-    <div className='md:w-[35%] w-[70%] flex flex-col  gap-4 md:h-[500px] bg-gray-100 shadow-2xl border-gray-100 items-center'>
+    <div className='md:w-[35%] w-[85%] flex flex-col  gap-4 md:h-[500px] bg-gray-100 shadow-2xl border-gray-100 items-center'>
         <h1 className='font-semibold text-[22px] pt-10 px-4'>
             Connect your service to Hubtel.
         </h1>
 
         <ul className='list-none flex flex-col gap-4 p-2 mb-10'>
-            <li className='border-2 font-semibold bg-white border-white inline-flex gap-2 items-center w-[100%] text-[20px] p-4 rounded-sm'>
+            <li className='border-2 font-semibold bg-white border-white inline-flex gap-2 items-center w-[100%] md:text-[20px] text-[18px] p-4 rounded-sm'>
 <img src={number1}/>
                 Complete the form to start set up. 
             </li>
 
-            <li className='border-2 bg-white border font-semibold border-white w-[100%] inline-flex gap-2 p-4 text-[20px] items-center rounded-sm '>
+            <li className='border-2 bg-white border font-semibold border-white w-[100%] inline-flex gap-2 p-4 md:text-[20px] text-[18px] items-center rounded-sm '>
               <img src={number2}/>
 
                 Integrate the APIs
             </li>
 
-            <li className='border-2 bg-white font-semibold border-white w-[100%] inline-flex gap-2 items-center p-4 text-[20px] rounded-sm'>
+            <li className='border-2 bg-white font-semibold border-white w-[100%] inline-flex gap-2 items-center p-4 md:text-[20px] text-[18px] rounded-sm'>
                 <img src={number3}/>
 
                 Start Selling 
@@ -84,7 +84,7 @@ const Service = () => {
         </ul>
     </div>
     
-    <div className='border-2 border-white  bg-white shadow-2xl rounded-sm p-4 md:h-[500px] md:w-[35%] w-[70%]'>
+    <div className='border-2 border-white  bg-white shadow-2xl rounded-sm p-4 md:h-[500px] md:w-[35%] w-[85%]'>
 
         <form className='flex flex-col gap-[1px] '>
             <span className='flex flex-col gap-[4px]'>

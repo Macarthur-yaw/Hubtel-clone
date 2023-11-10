@@ -140,11 +140,11 @@ useEffect(() => {
 
 
     return (
-        <div className='pt-20'>
+        <div className='py-32'>
             
             <div className='bg-[#CCFFEF] p-4 flex flex-col gap-6 items-center justify-center'>
             <div className='text-center flex flex-col gap-2 items-center'>
-                <h1 className='text-[30px]  font-bold'>
+                <h1 className='md:text-[30px] text-[20px]  font-bold'>
                     You take well of our unwell 
 
                     <AnimatePresence>
@@ -155,7 +155,7 @@ useEffect(() => {
       animate={{ opacity: 10 ,y:0}}
       exit={{ opacity: 0,y:-20 }}
       transition={{ duration: 30 }}
-      className={`${index === slideIndex ? 'block' : 'hidden'}`}
+      className={`${index === slideIndex ? 'block' : 'hidden'} ]`}
     >
       <p className='text-[#F7961C] font-semibold'>{source.content}</p>
     </motion.div>
@@ -166,10 +166,10 @@ useEffect(() => {
                     You take care of our unwell<br/>
 
                 </h1>
-                <h3 className='text-[20px] font-semibold'>
+                <h3 className='md:text-[20px] text-[14px] font-semibold'>
                     Let Hubtel manage your billing and payments to grow business.
                 </h3>
-                <button className='text-[white] w-[40%]  border-2 border-[#01c7b1] bg-[#01c7b1] font-bold p-2 shadow-md rounded-md'>Contact us to Unboard</button>
+                <button className='text-[white] w-[55%]  border-2 border-[#01c7b1] bg-[#01c7b1] font-bold p-2 shadow-md rounded-md'>Contact us to Unboard</button>
             </div>
             <div>
                 <img src={hospitalBg}  className='mx-auto md:w-[80%]'/>
@@ -189,11 +189,11 @@ useEffect(() => {
 
                 </div>
             
-            <div className='md:flex md:flex-row'>
+            <div className='md:flex md:flex-row flex flex-col gap-8'>
                 {contentPage.map((content)=>(
-                    <div key={content.id} className='md:w-[40%]  flex flex-col items-center justify-center'>
+                    <div key={content.id} className='md:w-[40%]  flex flex-col gap-4 items-center justify-center'>
 
-<img src={content.imgUrl} className='w-[60%]'/>
+<img src={content.imgUrl} className='w-[90%]'/>
 
 <div className='md:w-[70%] w-[50%] text-center'>
                        <h1 className='font-bold '>{content.title}</h1> 
@@ -309,9 +309,11 @@ className='inline-flex items-center flex-col text-[18px] font-semibold text-[#33
                         </h3>
                    <button className='bg-[#01c7b1] md:w-[20%] mb-10 text-sm border-[#01c7b1] text-[13px] font-bold p-2 text-white rounded-md'>GET STARTED NOW</button>
                     </span>
+<div className=''>
 
-                    <img src={schoolsPatners} className='max-w-[500px]'/>
-                </div>
+                    <img src={schoolsPatners} className='md:max-w-[500px] '/>
+     
+                    </div>           </div>
             </div>
         </div>
       );
