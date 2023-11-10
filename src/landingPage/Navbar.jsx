@@ -73,15 +73,15 @@ setServe(false)
      Take Payment
      <FaCaretDown/>
      <ul className='hidden group-hover:block absolute border-2 border-white pt-2 top-[99%] text-[15px]  bg-white left-[52%] shadow-sm'>
-     <li className='hover:bg-[#ECFFFD] p-4'>
-      <Link to='/Request'>Request money from anyone</Link>   
-     </li>
-     <li className='hover:bg-[#ECFFFD] p-4'>
-    <Link to='/Charge'>Charge Customers in store</Link>     
-     </li>
- <li className='hover:bg-[#ECFFFD] p-4'>
-   <Link to='/inter'>Integrate online checkout</Link>  
- </li>
+     <Link to='/Request'> <li className='hover:bg-[#ECFFFD] p-4'>
+      Request money from anyone   
+     </li></Link>
+     <Link to='/Charge'> <li className='hover:bg-[#ECFFFD] p-4'>
+    Charge Customers in store     
+     </li></Link>
+     <Link to='/inter'><li className='hover:bg-[#ECFFFD] p-4'>
+   Integrate online checkout  
+ </li></Link>
      </ul>
  </li>
  
@@ -102,15 +102,15 @@ setServe(false)
      Grow revenue
      <FaCaretDown/>
      <ul className='hidden group-hover:block absolute border-2 border-white  top-[99%] text-[15px] pt-2 bg-white left-[64.8%] shadow-sm'>
-     <li className='hover:bg-[#ECFFFD] p-4'>
-       <Link to='/Raise'>RaiseUp for schools </Link>  
-     </li>
-     <li className='hover:bg-[#ECFFFD] p-4'>
-      <Link to='/Hospitals'>Hubtel for Hospitals</Link>   
-     </li>
- <li className='hover:bg-[#ECFFFD] p-4'>
-  <Link to='/Government'>   Hubtel for Government</Link>
- </li>
+     <Link to='/Raise'> <li className='hover:bg-[#ECFFFD] p-4'>
+       RaiseUp for schools   
+     </li></Link>
+     <Link to='/Hospitals'> <li className='hover:bg-[#ECFFFD] p-4'>
+      Hubtel for Hospitals   
+     </li></Link>
+     <Link to='/Government'> <li className='hover:bg-[#ECFFFD] p-4'>
+     Hubtel for Government
+ </li></Link>
      </ul>
  
  
@@ -150,18 +150,18 @@ setServe(false)
      <FaCaretDown/>
  
     < ul className='hidden group-hover:block absolute border-2 border-white  top-[99%] text-[15px] pt-2 bg-white left-[87.4%] shadow-sm'>
-     <li className='hover:bg-[#ECFFFD] p-4'>
- <Link to='/Service'>       Service Providers</Link> 
-     </li>
-     <li className='hover:bg-[#ECFFFD] p-4'>
-      <Link to='/Shops'>   Shops</Link>
-     </li>
- <li className='hover:bg-[#ECFFFD] p-4'>
-   <Link to='/Riders'>  Riders</Link>
- </li>
- <li className='hover:bg-[#ECFFFD] p-4'>
- <Link to='/Restaurant'>    Restaurants</Link>
- </li>
+    <Link to='/Service'>    <li className='hover:bg-[#ECFFFD] p-4'>
+        Service Providers 
+     </li></Link>
+     <Link to='/Shops'> <li className='hover:bg-[#ECFFFD] p-4'>
+         Shops
+     </li></Link>
+     <Link to='/Riders'><li className='hover:bg-[#ECFFFD] p-4'>
+     Riders
+ </li></Link>
+ <Link to='/Restaurant'><li className='hover:bg-[#ECFFFD] p-4'>
+     Restaurants
+ </li></Link>
  
      </ul>
  
@@ -176,7 +176,7 @@ setServe(false)
              </div>
 <div>
 <motion.ul initial={{y:'-100%'}} animate={{y:display? 80:'-100%'}} transition={{duration:1}} className={`${display?'block       ':'hidden'} md:hidden border-2 border-white w-[100%] left-0 fixed bg-white flex flex-col text-black `}>
-    <li
+   <Link to='/'> <li
     
     className='text-[14.4px]  p-2
  
@@ -186,6 +186,7 @@ setServe(false)
      '>
          Make Orders
      </li>
+     </Link>
 <span className='flex flex-col'>
  <li className='text-[14.4px]
   p-2
@@ -207,15 +208,15 @@ flex flex-row
  {content && (
     <div>
        <ul className='   border-2 border-white pt-2  text-[13px]  bg-white shadow-sm'>
-       <li className='hover:bg-[#ECFFFD] p-4'>
-        <Link to='/Request'>Request money from anyone</Link>   
-       </li>
-       <li className='hover:bg-[#ECFFFD] p-4'>
-      <Link to='/Charge'>Charge Customers in store</Link>     
-       </li>
-   <li className='hover:bg-[#ECFFFD] p-4'>
-     <Link to='/inter'>Integrate online checkout</Link>  
-   </li>
+       <Link to='/Request'> <li className='hover:bg-[#ECFFFD] p-4'>
+        Request money from anyone   
+       </li></Link>
+       <Link to='/Charge'> <li className='hover:bg-[#ECFFFD] p-4'>
+      Charge Customers in store     
+       </li></Link>
+       <Link to='/inter'> <li className='hover:bg-[#ECFFFD] p-4'>
+     Integrate online checkout  
+   </li></Link>
        </ul>
        </div>
 )
@@ -240,28 +241,29 @@ flex flex-row
  </li>
  {revenue && (
       <ul className=' border-2 border-white  text-[13px] pt-2 bg-white shadow-sm'>
-      <li className='hover:bg-[#ECFFFD] p-4'>
-        <Link to='/Raise'>RaiseUp for schools </Link>  
-      </li>
-      <li className='hover:bg-[#ECFFFD] p-4'>
-       <Link to='/Hospitals'>Hubtel for Hospitals</Link>   
-      </li>
-  <li className='hover:bg-[#ECFFFD] p-4'>
-   <Link to='/Government'>   Hubtel for Government</Link>
-  </li>
+     <Link to='/Raise'> <li className='hover:bg-[#ECFFFD] p-4'>
+        RaiseUp for schools   
+      </li></Link>
+      <Link to='/Hospitals'> <li className='hover:bg-[#ECFFFD] p-4'>
+       Hubtel for Hospitals   
+      </li></Link>
+
+      <Link to='/Government'><li className='hover:bg-[#ECFFFD] p-4'>
+     Hubtel for Government
+  </li></Link>
       </ul>
   
   
  )}
  </span>
- <li className='text-[14.4px]
+ <Link to='/Sms'><li className='text-[14.4px]
  p-2
  border-b-[1px]
  cursor-pointer
  '>
      Send SMS
  </li>
- 
+ </Link>
  <span> <li className='text-[14.4px]
  p-2
  border-b-[1px] gap-2 flex flex-row cursor-pointer items-center
@@ -274,18 +276,18 @@ flex flex-row
 
 {serve && (
     < ul className='border-2 border-white   text-[13px] pt-2 bg-white  shadow-sm'>
-    <li className='hover:bg-[#ECFFFD] p-4'>
-<Link to='/Service'>       Service Providers</Link> 
-    </li>
-    <li className='hover:bg-[#ECFFFD] p-4 cursor-pointer'>
-     <Link to='/Shops'>   Shops</Link>
-    </li>
-<li className='hover:bg-[#ECFFFD] p-4 cursor-pointer'>
-  <Link to='/Riders'>  Riders</Link>
-</li>
-<li className='hover:bg-[#ECFFFD] p-4 cursor-pointer'>
-<Link to='/Restaurant'>    Restaurants</Link>
-</li>
+<Link to='/Service'>    <li className='hover:bg-[#ECFFFD] p-4'>
+       Service Providers 
+    </li></Link>
+    <Link to='/Shops'>   <li className='hover:bg-[#ECFFFD] p-4 cursor-pointer'>
+        Shops
+    </li></Link>
+    <Link to='/Riders'> <li className='hover:bg-[#ECFFFD] p-4 cursor-pointer'>
+    Riders
+</li></Link>
+<Link to='/Restaurant'><li className='hover:bg-[#ECFFFD] p-4 cursor-pointer'>
+    Restaurants
+</li></Link>
 
     </ul>
 
