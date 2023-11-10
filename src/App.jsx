@@ -15,6 +15,7 @@ import Service from './RouterPages/ServePages/Service'
 import Riders from './RouterPages/ServePages/Riders'
 import Shops from './RouterPages/ServePages/Shops'
 import Restaurant from './RouterPages/ServePages/Restaurant'
+import SmsPage from './RouterPages/SmsPage'
 
 function App() {
 
@@ -29,6 +30,8 @@ function App() {
   <Route path='/Charge' element={<Charge/>}/>
   <Route path='/inter' element={<InterPage/>}/>
   <Route path='/Request' element={<RequestPage/>}/>
+<Route path='/Sms' element={<SmsPage/>}/>
+
 
 <Route path='/Raise' element={<Raise/>}/>
 

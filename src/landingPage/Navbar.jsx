@@ -116,7 +116,7 @@ setServe(false)
  
  
  </li>
- 
+ <Link to='/Sms'>
  <li className='text-[14.4px]
  p-6
  border-2 
@@ -130,6 +130,7 @@ setServe(false)
  '>
      Send SMS
  </li>
+ </Link>
  
  <li className='text-[14.4px]
  p-6
