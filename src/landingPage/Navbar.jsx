@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import Hubtel from '../assets/hubtellogo.png'
 import  {FaCaretDown,FaBars} from 'react-icons/fa'
 import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { easeInOut, motion } from 'framer-motion'
 function Navbar(){
     const[display,setDisplay]=useState(false)
    const[content,setContent]=useState(false)
@@ -175,7 +175,7 @@ setServe(false)
  
              </div>
 <div>
-<motion.ul initial={{y:'-100%'}} animate={{y:display? 80:'-100%'}} transition={{duration:1}} className={`${display?'block       ':'hidden'} md:hidden border-2 border-white w-[100%] left-0 fixed bg-white flex flex-col text-black `}>
+<motion.ul initial={{y:'-100%'}} animate={{y:display? 80:'-100%'}} transition={{duration:0.1,ease:easeInOut}}  className={`${display?'block       ':'hidden'} md:hidden border-2 border-white w-[100%] left-0 fixed bg-white flex flex-col text-black  `}>
    <Link to='/'> <li
     
     className='text-[14.4px]  p-2

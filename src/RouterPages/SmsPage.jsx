@@ -171,54 +171,44 @@ setContent(contentPage)
 
 <div className='py-20 bg-[#f8f9fb] mt-10'>
     <span className='text-center'>
-        <h1>SMS Pricing</h1>
-        <h2>Scalable. Flexible. Offers more</h2>
+        <h1 className='font-semibold text-[20px]'>SMS Pricing</h1>
+        <h2 className='text-[16px]'>Scalable. Flexible. Offers more</h2>
     </span>
 
     <div className='p-4 '>
     <div className="">
-                            <div className="container py-4">
-                                <div id="scroll" className=" overflow-x-scroll">
-                                    <table id="main-content" className="md-[1rem] text-[#212529] border-[1px] border-[#dee2e6]">
-                                        <thead>
-                                            <tr>
-                                                <th  className="">Available Gateways</th>
-                                                <th  className="text-center px-5">
-                                                    <div>
-                                                        <img src={airtelTigo} width="35" className='mx-auto' />
-                                                    </div>
-                                                    <div >AirtelTigo (Ghana only)</div>
-                                                </th>
-                                                <th  className="text-center px-5">
-                                                    <div>
-                                                        <img src={hubtelpic} width="35" className='mx-auto' />
-                                                    </div>
-                                                    <div >Hubtel SMS (Ghana)</div>
-                                                </th>
-                                                <th  className="text-center px-5">
-                                                    <div>
-                                                        <img src={fortyTwo} width="35" className='mx-auto'/>
-                                                    </div>
-                                                    <div >42 Telecom (International)</div>
-                                                </th>
-                                                <th  className="text-center px-5">
-                                                    <div>
-                                                        <img src={hubtelpic} width="35" className='mx-auto'/>
-                                                    </div>
-                                                    <div >Hubtel SMS (Ghana &amp; International)</div>
-                                                </th>
-                                                <th  className="text-center px-5">
-                                                    <div>
-                                                        <img src={mtnPic} width="35" className='mx-auto'/>
-                                                    </div>
-                                                    <div >MTN (Ghana only)</div>
-                                                </th>
-                                                <th  className="text-center px-5">
-                                                    <div>
-                                                        <img src={vodafonePic} width="35" className='mx-auto'/>
-                                                    </div>
-                                                    <div >Vodafone (Ghana only)</div>
-                                                </th>
+                            <div className="container p-2  py-4">
+                                <div  className="p-2 overflow-x-scroll">
+                                 <table  className="md-[1rem] text-[#212529] border-[1px] p-2 border-[#dee2e6]">
+                                        <thead className=''>
+                                            <tr className='flex flex-row justify-between items-center border-2 w-[800px]'>
+                                                <td  className="text-sm text-center">Available Gateways</td>
+                                                <td  className="text-center px-5 flex flex-col text-sm  border-2">
+                                                        <img src={airtelTigo}  className='mx-auto w-[30px] h-[30px]' />
+                                                    
+                                                    AirtelTigo(Ghana only)
+                                                </td>
+                                                <td  className="text-center px-5 text-sm flex flex-col">
+                                                    
+                                                        <img src={hubtelpic}  className='mx-auto w-[30px] h-[30px]' />
+                                                    Hubtel SMS (Ghana)
+                                                </td>
+                                                <td  className="text-center px-5 text-sm flex flex-col">
+                                                        <img src={fortyTwo}  className='mx-auto w-[30px] h-[30px]'/>
+                                                    42 Telecom (International)
+                                                </td>
+                                                <td  className="text-center px-5 text-sm flex flex-col">
+                                                        <img src={hubtelpic}  className='mx-auto w-[30px] h-[30px]'/>
+                                                   Hubtel SMS (Ghana &amp; International)
+                                                </td>
+                                                <td  className="text-center px-5 flex flex-col text-sm">
+                                                        <img src={mtnPic}  className='mx-auto w-[30px] h-[30px]'/>
+                                                    MTN (Ghana only)
+                                                </td>
+                                                <td  className="text-center px-5 flex flex-col text-sm">
+                                                        <img src={vodafonePic}  className='mx-auto w-[30px] h-[30px]'/>
+                                                    Vodafone (Ghana only)
+                                                </td>
                                             </tr>
                                         </thead>
                                         <tbody className='text-center text-[15px] '>
