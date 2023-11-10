@@ -40,12 +40,12 @@ const Riders = () => {
                 
             </div>
 
-            <div className='py-20'>
+            <div className='py-20 px-4'>
                 <h1 className='text-center font-bold md:text-[25px]'>
                     How we work
                 </h1>
 <br/>
-                <div className='flex md:flex-row flex-col  items-center gap-6  justify-center'>
+                <div className='flex md:flex-row flex-col  items-center gap-6  justify-center '>
                     <div className='md:grid md:grid-rows-2 md:grid-flow-col flex flex-col gap-4'>
 <RiderCard Imageurl={num1} title='Chat with us from your own smartphone to see if you qualify'/>
 <RiderCard Imageurl={num2} title='Get trained and equipped at no extra cost'/>
@@ -160,9 +160,9 @@ Your safety is our priority. In case of accidents or unforeseen incidents, we di
 It’s totally free and applies from the moment you go online.
     </h2>
 
-    <button className='bg-[#01c7b1] text-white border-2 border-[#01c7b1] p-2 font-bold items-center text-[13px]  rounded-md inline-flex  gap-2 md:w-[70%]'><FaWhatsapp/> JOIN THE FASTEST GROWING DELIVERY NETWORK</button>
+    <button className='bg-[#01c7b1] inline-flex items-center text-white border-2 border-[#01c7b1] p-2 font-bold items-center text-[13px]  rounded-md inline-flex  gap-2 md:w-[70%] text-[12px]'><FaWhatsapp/> JOIN THE FASTEST GROWING DELIVERY NETWORK</button>
 </span>
-<div>
+<div className='p-2'>
 <img src={withYou} />
 </div>       </div>
         </div>
@@ -171,7 +171,7 @@ It’s totally free and applies from the moment you go online.
 
 const DeliverCard=(props)=>{
     return (
-        <div className='border-[1px] p-2 inline-flex gap-2 items-center w-[80%] rounded-md'>
+        <div className='border-[1px] p-2 inline-flex gap-2 items-center w-[100%] rounded-md'>
             <img src={checkMark} className='w-[40px] h-[40px]'/>
             <h1 className='md:text-[22px]'>
                 {props.title}

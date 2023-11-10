@@ -16,42 +16,42 @@ const Restaurant = () => {
     }
     return (
         <div className='py-20 '>
-            <div className='flex bg-gray-100 py-10 flex-row items-center justify-center'>
-                <span className='w-[40%] flex flex-col gap-2'>
-                    <h1 className='text-[25px] font-semibold'>
+            <div className='flex bg-gray-100 py-10 md:flex-row flex-col gap-2 items-center justify-center'>
+                <span className='md:w-[40%] flex flex-col items-center gap-2'>
+                    <h1 className='md:text-[25px] font-semibold'>
                     Serve your meals to hungry
                     <br/>
                      customers nearby
                     </h1>
 
-                    <h2 className='text-[20px]'>
+                    <h2 className='md:text-[20px] text-center'>
                     Reach more customers with your food servings. Restaurants on Hubtel see a sales boost of up to 42% within the first 90 days.
                     </h2>
 
-                    <button className='text-[13px] font-semibold border-[#01c7b1] border-2 bg-[#01c7b1] p-2 text-white rounded-md w-[40%]'>
+                    <button className='text-[13px] font-semibold border-[#01c7b1] border-2 bg-[#01c7b1] p-2 text-white rounded-md md:w-[40%]'>
                         ADD MY RESTAURANT
                     </button>
                 </span>
 
-                <img src={serveCustomers}   className='w-[35%]'/>
+                <img src={serveCustomers}   className='md:w-[35%] w-[80%]'/>
             </div>
 
             <div className='py-20 '>
-                <h1 className='font-bold text-[25px] px-6'>Modernise and grow your restaurant.</h1>
-              <div className=' p-4 flex flex-row justify-center'>
-              <div className='flex flex-col p-2 gap-2'>
+                <h1 className='font-bold md:text-[25px] text-center text-[20px] px-6'>Modernise and grow your restaurant.</h1>
+              <div className=' p-4 flex md:flex-row flex-col justify-center'>
+              <div className='flex flex-col w-[80%] mx-auto p-2 gap-2'>
                 <button
                 onClick={()=>pictureDisplay(orderDetails)}
                 className='flex flex-col gap-[4px] w-[100%] p-2 rounded-md border-[1px] focus:border-[#3159f5] focus:bg-[#f2f5ff]'>
 <img src={salesIcon}/>
-<h1 className='font-semibold text-[20px]'>Increase sales(orders)</h1>
+<h1 className='font-semibold md:text-[20px]'>Increase sales(orders)</h1>
 <h3 className='text-left'>Grow your kitchen orders to keep it busy throughout the day.</h3>
                 </button>
 
                 <button onClick={()=>pictureDisplay(livePic)}
                  className='flex border-[1px] gap-[4px] rounded-md p-2    flex-col w-[100%] focus:border-[#3159f5] focus:bg-[#f2f5ff]'>
 <img src={customersIcon}/>
-<h1 className='font-semibold text-[20px]'>Reach more Customers</h1>
+<h1 className='font-semibold md:text-[20px]'>Reach more Customers</h1>
 <h3 className='text-left'>Hubtel's marketing will help you attract new local customers and keep them coming back for more.
 
 </h3>
@@ -60,13 +60,13 @@ const Restaurant = () => {
 <button onClick={()=>pictureDisplay(orderDetails)}
  className='flex flex-col w-[100%] border-[1px] gap-[4px] rounded-md p-2 focus:border-[#3159f5] focus:bg-[#f2f5ff]'>
 <img src={truckIcon}/>
-<h1 className='font-semibold text-[20px] text-left'>Use our riders to deliver at no extra cost</h1>
+<h1 className='font-semibold md:text-[20px] text-left'>Use our riders to deliver at no extra cost</h1>
 <h3 className='text-left'>
     Hubtel's riders are trained,motivated, and equipped to deliver your meals professionally to customers on time.
 
 </h3>
 </button></div>
-<div className='border-[1px] w-[160%] border-[#3159f5] bg-[#f2f5ff]  rounded-md'>
+<div className='border-[1px] md:w-[160%]  border-[#3159f5] bg-[#f2f5ff]  rounded-md'>
 {image && <img src={image} className=''/>}
 </div>
 </div>    </div>
@@ -74,11 +74,11 @@ const Restaurant = () => {
 <div className='flex flex-col gap-10 py-20 bg-[#f2fff5]'>
 
 <div>
-<h1 className='text-[25px] font-semibold text-center'>Manage your online orders with Hubtel</h1>
-<h2 className='text-center text-[20px]'>Fire up your kitchen for Hubtel orders in a few easy steps</h2>
+<h1 className='md:text-[25px] font-semibold text-center'>Manage your online orders with Hubtel</h1>
+<h2 className='text-center md:text-[20px]'>Fire up your kitchen for Hubtel orders in a few easy steps</h2>
 </div>
 
-<div className='flex flex-row gap-4'>
+<div className='flex md:flex-row flex-col items-center gap-4'>
 <SectionCard imageUrl={roundOne} title='Come onboard' content='Tell us about your restaurant'/>
 <SectionCard imageUrl={roundTwo} title='Set up your restaurant on Hubtel' content='Upload a menu, schedule your photoshoot and if you need one we’ll ship your tablet.'/>
 <SectionCard imageUrl={roundThree} title='Start serving meals' content=' Sell,promote, track and manage your orders from the Hubtel Quick Commerce Portal on your smartphone,tablet or computer.'/>
@@ -87,14 +87,14 @@ const Restaurant = () => {
 </div>
 
 <div>
-<div className='flex flex-row justify-center gap-4 py-20'>
+<div className='flex md:flex-row flex-col justify-center gap-4 py-20'>
 
-<div className='border-2 border-gray-100 bg-gray-100 w-[40%] max-h-[780px] shadow-2xl rounded-md py-28'>
+<div className='border-2 border-gray-100 bg-gray-100 md:w-[40%] w-[85%] md:max-h-[780px] mx-auto shadow-2xl rounded-md py-28'>
 <img src={liveActivity}/>
 
 </div>
 
-<div className='border-2 border-white  bg-white shadow-2xl rounded-sm p-4 max-h-[780px] w-[35%]'>
+<div className='border-2 border-white  bg-white shadow-2xl rounded-sm p-4 md:max-h-[780px] md:w-[35%] w-[85%] mx-auto'>
 <h1 className='font-semibold text-[23px] p-4 text-center'>
 Let's get you set up and ready for orders
 </h1>
@@ -142,10 +142,10 @@ Let's get you set up and ready for orders
 }
 function SectionCard(props){
     return(
-        <div className='flex flex-col gap-2 w-[35%]  items-center'>
+        <div className='flex flex-col gap-2 md:w-[35%] p-2  items-center'>
             <img src={props.imageUrl} className='w-[50px] '/>
-            <h1 className='text-[25px] font-semibold'>{props.title}</h1>
-            <h2 className='text-[18px] text-center'>{props.content}</h2>
+            <h1 className='md:text-[25px] font-semibold'>{props.title}</h1>
+            <h2 className='md:text-[18px] text-center'>{props.content}</h2>
         </div>
     )
 }
