@@ -16,6 +16,7 @@ import qrIcon from '../assets/qr-icon.png'
 import hubtelPhone from '../assets/MicrosoftTeams-image.png'
 import Footer from './Footer'
 import basketTwo from '../assets/Basket-compressed.png'
+import { Link, useNavigate } from 'react-router-dom'
 
 // import Navbar from './Navbar'
 
@@ -23,6 +24,7 @@ import basketTwo from '../assets/Basket-compressed.png'
 
 function Body(){
     const[imag,setImag]=useState(null)
+    const navigate =useNavigate()
     function changeImage(imgName){
 setImag(imgName)
 
@@ -56,7 +58,7 @@ changeImage(side1)
     </div>
 
 <div className='text-center hidden md:block'>
-    or <a href='' className='text-[16px] text-[#01C7B1]'>Login</a>
+    or <Link to='/login' className='text-[16px] text-[#01C7B1]'>Login</Link>
     </div>
 
     
@@ -65,7 +67,7 @@ changeImage(side1)
 
 
 <div className='md:hidden fixed z-10 w-[100%] bg-white  left-0 border-2 border-white bottom-0 p-2'>
-       <button className='bg-[#01c7b1] w-[100%] p-2 border-[#01c7b1] text-white font-semibold rounded-md'> LOGIN</button>
+       <button onClick={()=>navigate('/login')} className='bg-[#01c7b1] w-[100%] p-2 border-[#01c7b1] text-white font-semibold rounded-md'> LOGIN</button>
     </div>
 <div id='backgroundImage' className='hidden md:block'>
 <img src={backgroundImage}/>
@@ -172,7 +174,9 @@ const Homepage = () => {
     return (  
         <div>
    
+{/* <Navbar></Navbar> */}
 
+{/* <Navbar/> */}
 <Body/>
   
         </div>
